@@ -1,0 +1,61 @@
+2.4.9.2
+- Fix pretty print function infinite loop when data ends with <!-- or <![CDATA[
+
+2.4.9.1
+- Patch pretty print function error which occurred when text contains "='" sequence
+
+2.4.9
+- Compilation of 64bit version of the plugin
+- Fix pretty print with attributes and/or text containing > char
+
+2.4.8
+- Add "Pretty print (attributes)" function
+- Fix pretty print of comments and CDATA blocs containing < or > char
+
+2.4.7
+- Add proxy support
+- Fix the "Set XML type automatically" function to avoid having caret placed at position 0 while changing the active tab
+
+2.4.6
+- Fix PrettyPrint on handling of quote delimiters used in xml attribute value
+- Re-compilation of libcurl.dll for Windows XP compatibility
+
+2.4.5
+- Modification of XPath evaluation to better manage XML with default namespace
+- Rollback of XML file detection behaviour modification of preceding release (was not working well)
+- Add a basic online check for plugin updates (checks on startup every 14 days)
+
+2.4.4
+- Speed+Memory optimization of pretty print function
+- Fix XML file detection issue when opening several files at once
+
+2.4.3
+- Fix auto-close with end markers ("</a>" and "-->")
+- Fix PrettyPrint on handling of '>' char present in text content
+
+2.4.2
+- Fix XPath evaluation for text() [bug #232]
+- Modification of PrettyPrint behaviour to avoid changing "<foo> <foo>" to "<foo/>" [bug #220]
+- Fix PrettyPrint EOL char support [bug #219]
+- Fix XPath evaluation issue with string result [bug #209]
+- Add information on unprefixed namespace handling during XPath evaluation [bug #195]
+- Fix a wrong reference to %appdata%\Notepad++
+
+2.4.1
+- Allow external DLLs to be loaded from %appdata%\Notepad++ folder
+- Change dialogs behaviour: dialogs are not destroyed on close and are restored on re-opening
+- Fix some memory leaks
+
+2.4
+- Fix pretty print error while playing with attributes containing quotes and double-quotes
+- Fix encoding support for following functions:
+  * Check XML syntax now
+  * Validate now
+  * Tag auto-close
+  * Current XML Path
+  * Evaluate XPath Expression
+  * XSL Transformation
+- Add "Prevent XXE" mode
+- Fix wrong selection length after conversions "&lt;&gt;" to "<>" and reverse
+- Upgrade libXML version (libXML 2.9.2, libXSLT 1.1.28, xmlsec 1.2.20, zlib 1.2.6, iconv 1.14, openssl 1.0.1j)
+- Add libXML/libXSLT versions infos in about box
